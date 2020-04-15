@@ -1,7 +1,8 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plungins
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin()
+
 
 " Aesthetics
 Plug 'rafi/awesome-vim-colorschemes'                          " Colorscheme pack
@@ -13,19 +14,22 @@ Plug 'Yggdroot/indentLine'                                    " Added ident leve
 " Syntax
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Syntax completion
 Plug 'calviken/vim-gdscript3'                                 " Add syntaxing for GDscript
-Plug 'leafgarland/typescript-vim'                             " Add syntaxing for TS
+Plug 'sheerun/vim-polyglot'                                   " Syntaxing for everything else
+Plug 'OmniSharp/omnisharp-vim'                                " Csharp
+Plug 'git@gitlab.bisimulations.com:neil.messelmani/bisim-sqf.git'
 
 " Tools
 Plug 'scrooloose/nerdtree'                                    " Side panel file explorer
 Plug 'itchyny/lightline.vim'                                  " Sexier status line
 Plug 'tpope/vim-surround'                                     " Auto closing of surrounding items
+Plug 'mhinz/vim-startify'                                     " Start-up screen for vim
 
 call plug#end()
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Settings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible            " Not compatible with vi
 set autoread                " Reload file on change
 filetype plugin on          " Related to plugins and local vs global settings
@@ -39,10 +43,17 @@ set ignorecase              " Ignore case when searching
 set smartcase               " When searching try to be smart about cases
 set hlsearch                " Highlight search results
 set incsearch               " Makes search act like search in modern browsers
+set tabstop=4               " Set tab width to 2 spaces
+set ai                      " Auto indent
 set laststatus=2
 set t_Co=256
-" set foldmethod=syntax
-" set foldcolumn=2
+
+" folding
+set foldmethod=indent
+set foldcolumn=4
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
 
 "Always show current position
 set ruler
@@ -63,15 +74,19 @@ set noequalalways
 
 " Miscelaneous
 set clipboard+=unnamedplus " Same clipboard as OS
-set wrap " Wrap lines
-set mouse=a " Enables mouse
-set laststatus=2 " Always show the status line
+set wrap                   " Wrap lines
+set mouse=a                " Enables mouse
+set laststatus=2           " Always show the status line
 
 let g:python3_host_prog = 'C:\Users\neil.messelmani\AppData\Local\Programs\Python\Python38-32\python.exe'
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" show empty characters
+set list
+set listchars=eol:¬,tab:›\ ,trail:·,extends:»,precedes:«,space:· " Show invisible characters
+
 " Set default colorscheme
 colorscheme gruvbox 
 set background=dark
@@ -89,11 +104,11 @@ endif
 set noshowmode
 
 
-""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin Specific 
-""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree Settings 
-autocmd VimEnter * NERDTree
+" autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 
 function! s:CloseIfOnlyControlWinLeft()
@@ -118,12 +133,12 @@ let g:rainbow_active = 1
 
 " Hexokinase, show coded colours
 " TODO: make this work?
-let g:Hexokinase_highlighters = ['sign_column']
+let g:Hexokinase_v2 = 1
+let g:Hexokinase_highlighters = ['virtual']
 let g:Hexokinase_signIcon = '■'
 let g:Hexokinase_ftAutoload = ['*']
 let g:Hexokinase_refreshEvents = ['BufWritePost']
 let g:Hexokinase_optInPatterns = 'full_hex,rgb,rgba,hsl,hsla,colour_names'
-let Hexokinase_v2 = 0
 let g:Hexokinase_executable_path = 'C:\Users\neil.messelmani\AppData\Local\nvim\plugged\vim-hexokinase\hexokinase\hexokinase.exe'
 
 " Identline settings
@@ -136,11 +151,21 @@ let g:lightline = {
 	\ 'colorscheme': 'gruvbox',
 	\ }
 
-""""""""""""""""""""""""""""""
+" Startify bookmarks
+let g:startify_bookmarks = [
+		\ { 'v': 'c:/Users/neil.messelmani/AppData/Local/nvim/init.vim' },
+		\ { 'p': 'z:/M/Projects/Godot/'},
+		\ { 'g': 'z:/P/git'},
+		\ ]
+
+" OmniSharp use stdio server
+let g:OmniSharp_server_stdio = 1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => mapping
-""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Toggle NERDTree
 map <F2> :NERDTreeToggle <CR>
+map <C-o> :NERDTreeToggle <CR>
 
 " Remap panel navigation
 map <C-h> <C-S-W>h
@@ -162,7 +187,7 @@ nnoremap <C-=> <C-w>+
 nnoremap <C-,> <C-w><
 nnoremap <C-.> <C-w>>
 
-"Better CR
+" C+ENTER when between brackets for more modern CR
 inoremap <C-CR> <CR><CR><Up><Tab>
 
 " Esc to exit terminal mode
@@ -170,4 +195,8 @@ tnoremap <Esc> <C-\><C-n>
 
 " Paste text to command line
 cnoremap <C-v> <C-r>"
+
+" Move lines
+xnoremap K :move '<-2<CR>gv-gv
+xnoremap J :move '>+1<CR>gv-gv
 
