@@ -1,0 +1,89 @@
+{
+    // Godot
+    "languageserver": {
+        "godot": {
+            "host": "127.0.0.1",
+            "filetypes": ["gdscript"],
+            "port": 6008
+        }
+    },
+
+    // Python
+    "python.jediEnabled": false,
+
+    // Git
+    "git.addGBlameToVirtualText":true,
+
+    // explorer
+    "suggest.noselect": false,
+    "explorer.width": 40,
+    "explorer.file.column.indent.indentLine": true,
+    "explorer.previewAction.onHover": true,
+    "explorer.icon.enableNerdfont": true,
+    "explorer.quitOnOpen": true,
+    "explorer.position": "left",
+    "explorer.file.showHiddenFiles": true,
+    "explorer.file.column.clip.copy": "",
+    "explorer.file.column.clip.cut": "",
+    "explorer.keyMappings": {
+        "gk": "expandablePrev",
+        "gj": "expandableNext",
+    
+        "<space>": "toggleSelection",
+        "<tab>": "actionMenu",
+    
+        "h": "collapse",
+        "l": ["expandable?", "expand", "open"],
+        "o": ["expandable?", "expand", "open"],
+        "J": ["toggleSelection", "nodeNext"],
+        "K": ["toggleSelection", "nodePrev"],
+        "<2-LeftMouse>": [
+          "expandable?",
+          ["expanded?", "collapse", "expand"],
+          "open"
+        ],
+        // "o": ["expanded?", "collapse", "expand"],
+        "<cr>": ["expandable?", "cd", "open"],
+        "H": "open:split",
+        "S": "open:split:plain",
+        "v": "open:vsplit",
+        "t": "open:tab",
+        "<bs>": "gotoParent",
+        "gp": "preview:labeling",
+    
+        "Y": "copyFile",
+        "X": "cutFile",
+        "P": "pasteFile",
+        "dd": "delete",
+    
+        "T": "addFile",
+        "D": "addDirectory",
+        "r": "rename",
+    
+        ".": "toggleHidden",
+        "R": "refresh",
+    
+        "?": "help",
+        "q": "quit",
+        "<esc>": "quit", // "esc",
+        "!": "systemExecute",
+        "gd": "listDrive",
+    
+        "f": "search",
+        "F": "searchRecursive",
+    
+        "gf": "gotoSource:file",
+        "gb": "gotoSource:buffer",
+    
+        "[[": "sourcePrev",
+        "]]": "sourceNext",
+    
+        "[d": "diagnosticPrev",
+        "]d": "diagnosticNext",
+    
+        "[c": "gitPrev",
+        "]c": "gitNext",
+        "<<": "gitStage",
+        ">>": "gitUnstage"
+    }
+}

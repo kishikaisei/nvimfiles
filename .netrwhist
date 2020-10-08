@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =4
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='C:\Users\neil.messelmani\Desktop\jsmpeg-vnc'
+let g:netrw_dirhist_6='z:/P/git'
+let g:netrw_dirhist_5='z:/M/Projects/Godot'
 let g:netrw_dirhist_4='c:\Users\neil.messelmani\AppData\Local\nvim\plugged\vim-hexokinase\hexokinase'
 let g:netrw_dirhist_3='C:/Users/neil.messelmani/AppData/Local/nvim'
 let g:netrw_dirhist_2='C:\Users\neil.messelmani\AppData\Local\nvim'
