@@ -42,7 +42,7 @@ set noequalalways
 
 " Miscelaneous
 set clipboard+=unnamedplus																				" Same clipboard as OS
-" set nowrap																												" Wrap lines
+set nowrap																												" Wrap lines
 set mouse=a																												" Enables mouse
 set laststatus=2																									" Always show the status line
 

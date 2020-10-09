@@ -27,6 +27,7 @@ Plug 'tpope/vim-surround'																					" Auto closing of surrounding item
 Plug 'jiangmiao/auto-pairs'																				" Auto close pairs
 Plug 'alvan/vim-closetag'																					" Auto close HTML tags
 Plug 'mhinz/vim-startify'																					" Start-up screen for vim
+Plug 'wsdjeg/FlyGrep.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'

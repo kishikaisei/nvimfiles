@@ -29,9 +29,11 @@
         "gk": "expandablePrev",
         "gj": "expandableNext",
     
+        "<space>e": "quit",
         "<space>": "toggleSelection",
         "<tab>": "actionMenu",
     
+        "e": "",
         "h": "collapse",
         "l": ["expandable?", "expand", "open"],
         "o": ["expandable?", "expand", "open"],
@@ -47,6 +49,7 @@
         "H": "open:split",
         "S": "open:split:plain",
         "v": "open:vsplit",
+        "V": "open:vsplit:plain",
         "t": "open:tab",
         "<bs>": "gotoParent",
         "gp": "preview:labeling",

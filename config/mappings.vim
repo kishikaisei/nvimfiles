@@ -1,5 +1,7 @@
 " Clear highlight when new search
 nnoremap / :noh<CR>/
+nnoremap <Space><Space> :
+ 
 
 " Remap panel navigation
 map <C-h> <C-S-W>h
@@ -10,7 +12,8 @@ map <C-l> <C-S-W>l
 " Intuative navigation in wrapped lines
 noremap <silent> k gk
 noremap <silent> j gj
-noremap <silent> 0 g0
+noremap <silent> 0 g^
+noremap <Home> g0
 noremap <silent> $ g$
 inoremap <C-v> <C-R>*
 
@@ -42,3 +45,5 @@ nnoremap d "_d
 nnoremap c "_c
 nnoremap x "_x
 
+nnoremap yd d
+nnoremap yc c
