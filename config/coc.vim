@@ -159,3 +159,4 @@ let g:coc_explorer_global_presets = {
 
 " CoC-Explorer
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+

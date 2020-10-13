@@ -13,7 +13,7 @@ map <C-l> <C-S-W>l
 noremap <silent> k gk
 noremap <silent> j gj
 noremap <silent> 0 g^
-noremap <Home> g0
+noremap <silent> 00 g^
 noremap <silent> $ g$
 inoremap <C-v> <C-R>*
 
@@ -47,3 +47,6 @@ nnoremap x "_x
 
 nnoremap yd d
 nnoremap yc c
+
+" Folding
+" nnoremap zf V%zf

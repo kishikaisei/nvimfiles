@@ -37,6 +37,7 @@ let g:lazygit_floating_window_scaling_factor = 0.9 " scaling factor for floating
 
 " Airline
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 " Godot
 " func! GodotSettings() abort
@@ -54,22 +55,25 @@ let g:airline_powerline_fonts = 1
 " goneovim
 autocmd FileType markdown nnoremap <buffer> <C-p> :GonvimMarkdown<CR>
 
-" Hexokinase
-let g:Hexokinase_refreshEvents = ['InsertLeave']
 
-let g:Hexokinase_optInPatterns = [
-			\     'full_hex',
-			\     'triple_hex',
-			\     'rgb',
-			\     'rgba',
-			\     'hsl',
-			\     'hsla',
-			\     'colour_names'
-			\ ]
+" flygrep
+let g:spacevim_data_dir = "C:\Users\neil.messelmani\AppData\Local\nvim\plugged\FlyGrep.vim\autoload\SpaceVim"
 
-let g:Hexokinase_virtualText = '■'
-let g:Hexokinase_highlighters = [ 'virtual' ]
-
-" Reenable hexokinase on enter
-autocmd VimEnter * HexokinaseTurnOn
-
+" " Hexokinase
+" let g:Hexokinase_refreshEvents = ['InsertLeave']
+" 
+" let g:Hexokinase_optInPatterns = [
+" 			\     'full_hex',
+" 			\     'triple_hex',
+" 			\     'rgb',
+" 			\     'rgba',
+" 			\     'hsl',
+" 			\     'hsla',
+" 			\     'colour_names'
+" 			\ ]
+" 
+" let g:Hexokinase_virtualText = '■'
+" let g:Hexokinase_highlighters = [ 'virtual' ]
+" 
+" " Reenable hexokinase on enter
+" autocmd VimEnter * HexokinaseTurnOn

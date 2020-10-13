@@ -13,6 +13,14 @@
 
     // Git
     "git.addGBlameToVirtualText":true,
+    "git.changedSign.text":"",
+    "git.addedSign.text":"",
+    "git.removedSign.text":"",
+    "git.changeRemovedSign.text":"",
+    "git.gitlab.hosts": [
+        "gitlab.com",
+        "gitlab.bisimulations.com"
+    ],
 
     // explorer
     "suggest.noselect": false,
@@ -25,6 +33,10 @@
     "explorer.file.showHiddenFiles": true,
     "explorer.file.column.clip.copy": "",
     "explorer.file.column.clip.cut": "",
+    "explorer.file.column.git.icon.ignored":"",
+    "explorer.file.column.git.icon.added":"",
+    "explorer.file.column.git.icon.deleted":"",
+    "explorer.file.column.git.icon.modified":"",
     "explorer.keyMappings": {
         "gk": "expandablePrev",
         "gj": "expandableNext",
