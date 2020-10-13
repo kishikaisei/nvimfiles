@@ -10,6 +10,9 @@
 [._]ss[a-gi-z]
 [._]sw[a-p]
 
+# Ignore plugins folder
+plugged/*
+
 # Session
 Session.vim
 Sessionx.vim
