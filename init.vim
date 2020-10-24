@@ -8,5 +8,6 @@ runtime config/mappings.vim
 runtime config/misc.vim
 runtime config/coc.vim
 runtime config/fzf.vim
+runtime config/defx.vim
 runtime config/whichkey.vim
 

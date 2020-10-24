@@ -1,8 +1,8 @@
-" Identline
+" => Identline
 let g:indentLine_char = ''
 let g:indentLine_setColors = 1
 
-" Startify
+" => Startify
 let g:startify_lists = [
 					\ { 'type': 'dir',       'header': ['   Current Directory '. getcwd()] },
 					\ { 'type': 'sessions',  'header': ['   Sessions']                     },
@@ -31,49 +31,45 @@ let g:startify_enable_special = 0
 autocmd User Startified nmap <buffer> l <plug>(startify-open-buffers)
 autocmd User Startified nmap <buffer> o <plug>(startify-open-buffers)
 
-" Lazygit
+" => Lazygit
 let g:lazygit_floating_window_winblend = 0 " transparency of floating window
 let g:lazygit_floating_window_scaling_factor = 0.9 " scaling factor for floating window
 
-" Airline
+" => Airline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_left_sep  = ''
+let g:airline_left_alt_sep  = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
 
-" Godot
-" func! GodotSettings() abort
-"   setlocal foldmethod=expr
-"   setlocal tabstop=4
-"   nnoremap <buffer> <F4> :GodotRunLast<CR>
-"   nnoremap <buffer> <F5> :GodotRun<CR>
-"   nnoremap <buffer> <F6> :GodotRunCurrent<CR>
-"   nnoremap <buffer> <F7> :GodotRunFZF<CR>
-" endfunc
-" augroup godot | au!
-"   au FileType gdscript call GodotSettings()
-" augroup end
+" => AnyFold
+autocmd Filetype * AnyFoldActivate
+let g:anyfold_fold_comments=1
+set foldlevel=99
+hi Folded term=NONE cterm=NONE
+
+" => tagbar
+let g:tagbar_ctags_bin='C:\tools\universal-ctags\ctags.exe'
+
+" => Godot
+func! GodotSettings() abort
+  setlocal foldmethod=expr
+  setlocal tabstop=4
+  nnoremap <buffer> <F4> :GodotRunLast<CR>
+  nnoremap <buffer> <F5> :GodotRun<CR>
+  nnoremap <buffer> <F6> :GodotRunCurrent<CR>
+  nnoremap <buffer> <F7> :GodotRunFZF<CR>
+endfunc
+augroup godot | au!
+  au FileType gdscript call GodotSettings()
+augroup end
+
+" Colorizer
+let g:colorizer_use_virtual_text = 1
 
 " goneovim
 autocmd FileType markdown nnoremap <buffer> <C-p> :GonvimMarkdown<CR>
+" Neovide
+let g:neovide_cursor_animation_length=0.05
 
-
-" flygrep
-let g:spacevim_data_dir = "C:\Users\neil.messelmani\AppData\Local\nvim\plugged\FlyGrep.vim\autoload\SpaceVim"
-
-" " Hexokinase
-" let g:Hexokinase_refreshEvents = ['InsertLeave']
-" 
-" let g:Hexokinase_optInPatterns = [
-" 			\     'full_hex',
-" 			\     'triple_hex',
-" 			\     'rgb',
-" 			\     'rgba',
-" 			\     'hsl',
-" 			\     'hsla',
-" 			\     'colour_names'
-" 			\ ]
-" 
-" let g:Hexokinase_virtualText = '■'
-" let g:Hexokinase_highlighters = [ 'virtual' ]
-" 
-" " Reenable hexokinase on enter
-" autocmd VimEnter * HexokinaseTurnOn

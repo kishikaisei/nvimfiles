@@ -5,7 +5,8 @@ let mapleader = " "
 " Generals
 filetype plugin indent on																					" Related to plugins and local vs global settings
 set autoread																											" Reload file on change
-set so=15																													" Set 7 lines to the cursor
+set autochdir																											" Automatically CD to file folder
+set so=5																													" Set 7 lines to the cursor
 set splitbelow splitright																					" Intutive Split
 set wildmenu																											" Turn on the WiLd menu
 set wildignore=*.o,*~,*.pyc																				" Ignore compiled files
@@ -30,7 +31,7 @@ set cul																														" Highlight current line
 
 set noerrorbells																									" Remove terminal sounds: errors
 set novisualbell																									" Remove terminal sounds: visual
-set tm=100																												" Wait between mapped sequences to complete
+set tm=150																												" Wait between mapped sequences to complete
 set updatetime=100																								" Wait before writing to swap
 
 " Turn backup off
@@ -48,15 +49,17 @@ set laststatus=2																									" Always show the status line
 set undodir=$LOCALAPPDATA."\\nvim\\undotree"
 set undofile
 
-
-let g:python2_host_prog = 'C:\Program Files\Python27\python.exe'
-let g:python3_host_prog = 'C:\Program Files\Python38\python.exe'
+let g:python2_host_prog = 'C:\Program Files\Python27\python.exe'	" Python 2 Path
+let g:python3_host_prog = 'C:\Program Files\Python38\python.exe'	" Python 3 Path
 
 " => Colors and Fonts
 set guifont=FiraCode\ NF:h10
-" show empty characters
+if exists('g:neovide')
+	set guifont=FiraCode\ NF:h13
+end
+
 set list
-set listchars=eol:,tab:\ ,trail:·,extends:»,precedes:«,space:·		" Show invisible characters
+set listchars=eol:,tab:\ ,extends:ﲖ,precedes:ﲕ									" Show invisible characters
 syntax enable																											" Enable syntax highlighting
 set ffs=unix,dos,mac																							" Use Unix as the standard file type
 set termguicolors
@@ -66,10 +69,15 @@ endif
 set noshowmode
 
 " Set default colorscheme
-colorscheme gruvbox 
+colorscheme gruvbox
 set background=dark
-let g:gruvbox_contrast_dark='soft'
-let g:gruvbox_contrast_light='hard'
+let g:gruvbox_contrast_dark					= 'soft'
+let g:gruvbox_contrast_light				= 'hard'
+let g:gruvbox_invert_selection			= 0
+let g:gruvbox_invert_indent_guides	= 1
+let g:gruvbox_improved_strings			= 1
+let g:gruvbox_improved_warnings			= 1
+let g:gruvbox_invert_tabline				= 1
 
 au BufRead,BufNewFile *.wsb set filetype=xml
 

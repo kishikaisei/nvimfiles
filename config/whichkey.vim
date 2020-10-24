@@ -34,6 +34,7 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 let g:which_key_map['.'] = [ ':e $MYVIMRC'                                                 , 'open init' ]
 let g:which_key_map[';'] = [ ':Commands'                                                   , 'commands' ]
 let g:which_key_map['='] = [ '<C-W>='                                                      , 'balance windows' ]
+let g:which_key_map['m'] = [ '<C-W>|'                                                      , 'balance windows' ]
 let g:which_key_map['d'] = [ ':Bdelete'                                                    , 'delete buffer']
 let g:which_key_map['e'] = [ ':CocCommand explorer --toggle --sources=buffer+,file+'       , 'explorer' ]
 " let g:which_key_map['f'] = [ ':Farr'                                                       , 'find and replace' ]
