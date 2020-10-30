@@ -31,7 +31,7 @@ set cul																														" Highlight current line
 
 set noerrorbells																									" Remove terminal sounds: errors
 set novisualbell																									" Remove terminal sounds: visual
-set tm=150																												" Wait between mapped sequences to complete
+set tm=250																												" Wait between mapped sequences to complete
 set updatetime=100																								" Wait before writing to swap
 
 " Turn backup off
@@ -59,7 +59,7 @@ if exists('g:neovide')
 end
 
 set list
-set listchars=eol:,tab:\ ,extends:ﲖ,precedes:ﲕ									" Show invisible characters
+set listchars=eol:,tab:\ ,extends:ﲖ,precedes:ﲕ									" Show invisible characters
 syntax enable																											" Enable syntax highlighting
 set ffs=unix,dos,mac																							" Use Unix as the standard file type
 set termguicolors
@@ -69,7 +69,8 @@ endif
 set noshowmode
 
 " Set default colorscheme
-colorscheme gruvbox
+" colorscheme gruvbox
+colorscheme sierra
 set background=dark
 let g:gruvbox_contrast_dark					= 'soft'
 let g:gruvbox_contrast_light				= 'hard'

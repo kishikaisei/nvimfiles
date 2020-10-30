@@ -35,6 +35,12 @@ cnoremap <C-v> <C-r>"
 " Move lines
 xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '>+1<CR>gv-gv
+" nnoremap J :m .+1<CR>==
+" nnoremap K :m .-2<CR>==
+" inoremap J <Esc>:m .+1<CR>==gi
+" inoremap K <Esc>:m .-2<CR>==gi
+" vnoremap J :m '>+1<CR>gv=gv
+" vnoremap K :m '<-2<CR>gv=gv
 
 " No yanking when deleting/changing
 nnoremap d "_d

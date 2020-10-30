@@ -1,4 +1,4 @@
-set nocompatible                                                  " Not compatible with vi
+set nocompatible
 
 runtime config/plugins.vim
 runtime config/settings.vim

@@ -1,18 +1,36 @@
+" => match it
+let g:loaded_matchit = 1
+
+" => windowswap
+let g:windowswap_map_keys = 0
+
 " => Identline
+" let g:indentLine_setColors = 0
 let g:indentLine_char = ''
-let g:indentLine_setColors = 1
+" let g:indent_blankline_extra_indent_level = -1
+let g:indentLine_fileTypeExclude = [ 'startify', 'coc-explorer' ]
 
 " => Startify
 let g:startify_lists = [
-					\ { 'type': 'dir',       'header': ['   Current Directory '. getcwd()] },
 					\ { 'type': 'sessions',  'header': ['   Sessions']                     },
+					\ { 'type': 'files',     'header': ['   Recent files']                 },
 					\ { 'type': 'bookmarks', 'header': ['   Bookmarks']                    },
+					\ { 'type': 'commands',  'header': ['   Commands'] },
 					\ ]
 
 let g:startify_bookmarks = [
-						\ { '.': 'C:\Users\neil.messelmani\AppData\Local\nvim\init.vim' },
-						\ { 'i': 'M:\Projects\Godot\ikaruga\README' },
-						\ ]
+					\ { '.': 'C:\Users\neil.messelmani\AppData\Local\nvim\init.vim' },
+					\ { 'i': 'M:\Projects\Godot\ikaruga\README' },
+					\ ]
+
+let g:startify_commands = [
+					\ {'h': 'h ref'},
+					\ ]
+
+" let g:startify_session_before_save = [
+" 		\ 'silent! CocCommand explorer --no-toggle',
+" 		\ 'silent! CocCommand explorer --toggle',
+" 		\ ]
 
 let g:startify_session_autoload = 1
 let g:startify_session_delete_buffers = 1
@@ -67,6 +85,13 @@ augroup end
 
 " Colorizer
 let g:colorizer_use_virtual_text = 1
+
+" Sleuth
+let g:sleuth_automatic = 1
+
+" Wildfire
+" nmap = <Plug>(wildfire-fuel)
+" nmap - <Plug>(wildfire-water)
 
 " goneovim
 autocmd FileType markdown nnoremap <buffer> <C-p> :GonvimMarkdown<CR>

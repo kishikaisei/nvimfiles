@@ -8,6 +8,9 @@
         }
     },
 
+		// yank
+		"yank.highlight.duration": 150,
+
     // Python
     "python.jediEnabled": false,
 
