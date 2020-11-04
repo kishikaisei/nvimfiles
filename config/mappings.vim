@@ -1,5 +1,5 @@
 " Clear highlight when new search
-nnoremap / :noh<CR>/
+" nnoremap / :noh<CR>/
 
 " Remap panel navigation
 map <C-h> <C-S-W>h
@@ -11,6 +11,7 @@ map <C-l> <C-S-W>l
 noremap <silent> k gk
 noremap <silent> j gj
 noremap <silent> 0 ^
+noremap <silent> ^ 0
 inoremap <C-v> <C-R>*
 
 " Resize tabs
@@ -49,7 +50,4 @@ nnoremap x "_x
 
 nnoremap yd d
 nnoremap yc c
-
-" Folding
-" nnoremap zf V%zf
 

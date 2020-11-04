@@ -74,8 +74,8 @@
         "P": "pasteFile",
         "dd": "delete",
     
-        "T": "addFile",
-        "D": "addDirectory",
+        "mf": "addFile",
+        "md": "addDirectory",
         "r": "rename",
     
         ".": "toggleHidden",

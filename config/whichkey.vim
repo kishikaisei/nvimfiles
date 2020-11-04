@@ -54,17 +54,17 @@ let g:which_key_map['v'] = [ '<C-W>v'                                           
 " a is for actions
 let g:which_key_map.a = {
 			\ 'name' : ' Actions' ,
-			\ 'c' : [':ColorizerToggle'                                                          , 'Colorizer'],
-			\ 'e' : [':CocCommand explorer --toggle --sources=buffer+,file+'                     , 'Explorer'],
-			\ 'f' : [':CocCommand explorer --preset floating --sources=buffer+,file+<CR>'        , 'Explorer'],
-			\ 'l' : [':Bracey'                                                                   , 'Start live server'],
-			\ 'L' : [':BraceyStop'                                                               , 'Stop live server'],
 			\ 'm' : [':MarkdownPreview'                                                          , 'Markdown preview'],
 			\ 'M' : [':MarkdownPreviewStop'                                                      , 'Markdown preview stop'],
-			\ 'n' : [':set nonumber!'                                                            , 'Line-numbers'],
-			\ 'r' : [':set norelativenumber!'                                                    , 'Relative line nums'],
 			\ 's' : [':let @/ = ""'                                                              , 'Remove search highlight'],
 			\ 'w' : [':StripWhitespace'                                                          , 'Strip whitespace'],
+			\ }
+let g:which_key_map.a.t = {
+			\ 'name' : ' Tabularize',
+			\ ':' : [':Tabularize /:<CR>'                                                        , 'Allign :'],
+			\ '|' : [':Tabularize /|<CR>'                                                        , 'Allign |'],
+			\ ',' : [':Tabularize /,<CR>'                                                        , 'Allign ,'],
+			\ '=' : [':Tabularize /=<CR>'                                                        , 'Allign ='],
 			\ }
 
 " b is for buffer
@@ -191,32 +191,35 @@ let g:which_key_map.s = {
 
 let g:which_key_map.S = {
 			\ 'name' : ' Session' ,
-			\ 'c' : [':SClose'                                                                   , 'Close Session']  ,
-			\ 'd' : [':SDelete'                                                                  , 'Delete Session'] ,
-			\ 'l' : [':SLoad'                                                                    , 'Load Session']     ,
-			\ 's' : [':Startify'                                                                 , 'Start Page']     ,
-			\ 'S' : [':SSave'                                                                    , 'Save Session']   ,
+			\ 'c' : [':SClose'                                                                   , 'Close Session'],
+			\ 'd' : [':SDelete'                                                                  , 'Delete Session'],
+			\ 'l' : [':SLoad'                                                                    , 'Load Session'],
+			\ 's' : [':Startify'                                                                 , 'Start Page'],
+			\ 'S' : [':SSave'                                                                    , 'Save Session'],
 			\ }
 
 " t is for terminal
 let g:which_key_map.t = {
 			\ 'name' : ' Terminal' ,
-			\ ';' : [':FloatermNew --wintype=normal --height=6'                                  , 'Terminal'],
-			\ 'f' : [':FloatermNew fzf'                                                          , 'FZF'],
-			\ 'g' : [':FloatermNew --height=0.8 --width=0.8 lazygit'                             , 'Git'],
-			\ 'n' : [':FloatermNew --height=0.8 --width=0.8'                                     , 'New'],
-			\ 'p' : [':FloatermNew python'                                                       , 'Python'],
-			\ 'q' : [':FloatermKill'                                                             , 'Killterm'],
-			\ 't' : [':FloatermToggle'                                                           , 'Toggle'],
+			\ ';' : [':FloatermNew --wintype=normal --height=6'                                                         , 'Terminal'],
+			\ 'f' : [':FloatermNew fzf'                                                                                 , 'FZF'],
+			\ 'g' : [':FloatermNew --height=0.8 --width=0.8 lazygit'                                                    , 'Git'],
+			\ 'l' : [':FloatermNew BisimContentGettext --angular --output src/app/i18n/resources/strings.pot --rewrite' , 'GetText'],
+			\ 'n' : [':FloatermNew --height=0.8 --width=0.8'                                                            , 'New'],
+			\ 'p' : [':FloatermNew python'                                                                              , 'Python'],
+			\ 'q' : [':FloatermKill'                                                                                    , 'Killterm'],
+			\ 's' : [':FloatermNew npm run convertStrings && npm-run-all --parallel convertStrings:onchange ngServe'    , 'NPM start'],
+			\ 't' : [':FloatermToggle'                                                                                  , 'Toggle'],
 			\ }
 
 " w is for window
 let g:which_key_map.w = {
 			\ 'name' : ' Window' ,
 			\ 'f' : [':let g:neovide_fullscreen=v:true'                                          , 'Fullscreen'],
+			\ 'F' : [':let g:neovide_fullscreen=v:false'                                         , 'Unfullscreen'],
 			\ 'c' : ['<Plug>(choosewin)'                                                         , 'Choose window'],
 			\ '=' : ['<C-W>='                                                                    , 'Balance windows'],
-			\ 'm' : ['<C-W>|<C-W>_'                                                              , 'Maximise windows'],
+			\ 'm' : ['<C-W>\|<C-W>_'                                                             , 'Maximise windows'],
 			\ 'h' : ['<C-W>h'                                                                    , 'Move to left window' ],
 			\ 'j' : ['<C-W>j'                                                                    , 'Move to below window' ],
 			\ 'k' : ['<C-W>k'                                                                    , 'Move to above window' ],

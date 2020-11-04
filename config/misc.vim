@@ -1,8 +1,25 @@
+" => CommandlineComplete
+cmap <c-p> <Plug>CmdlineCompleteBackward
+cmap <c-n> <Plug>CmdlineCompleteForward
+
 " => match it
 let g:loaded_matchit = 1
 
 " => windowswap
 let g:windowswap_map_keys = 0
+
+" => incsearch
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
 
 " => Identline
 " let g:indentLine_setColors = 0
@@ -15,7 +32,6 @@ let g:startify_lists = [
 					\ { 'type': 'sessions',  'header': ['   Sessions']                     },
 					\ { 'type': 'files',     'header': ['   Recent files']                 },
 					\ { 'type': 'bookmarks', 'header': ['   Bookmarks']                    },
-					\ { 'type': 'commands',  'header': ['   Commands'] },
 					\ ]
 
 let g:startify_bookmarks = [
@@ -23,15 +39,12 @@ let g:startify_bookmarks = [
 					\ { 'i': 'M:\Projects\Godot\ikaruga\README' },
 					\ ]
 
-let g:startify_commands = [
-					\ {'h': 'h ref'},
-					\ ]
-
 " let g:startify_session_before_save = [
 " 		\ 'silent! CocCommand explorer --no-toggle',
 " 		\ 'silent! CocCommand explorer --toggle',
 " 		\ ]
 
+let g:startify_enable_special = 1
 let g:startify_session_autoload = 1
 let g:startify_session_delete_buffers = 1
 let g:startify_change_to_vcs_root = 1
@@ -44,8 +57,6 @@ function! StartifyEntryFormat()
 	return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
 endfunction
 
-let g:startify_enable_special = 0
-
 autocmd User Startified nmap <buffer> l <plug>(startify-open-buffers)
 autocmd User Startified nmap <buffer> o <plug>(startify-open-buffers)
 
@@ -56,6 +67,7 @@ let g:lazygit_floating_window_scaling_factor = 0.9 " scaling factor for floating
 " => Airline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#tab_min_count = 2
 let g:airline_left_sep  = ''
 let g:airline_left_alt_sep  = ''
 let g:airline_right_sep = ''
