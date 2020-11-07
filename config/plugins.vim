@@ -6,6 +6,10 @@ call plug#begin()
 	Plug 'overcache/NeoSolarized'																							" Solarized theme
 	Plug 'embark-theme/vim', { 'as': 'embark' }																" Embark theme
 	Plug 'NLKNguyen/papercolor-theme'																					" Papercolor theme
+	Plug 'AlessandroYorba/Alduin'																							" Alduin theme
+	Plug 'AlessandroYorba/Arcadia'																						" Arcadia theme
+	Plug 'AlessandroYorba/Breve'																							" Breve theme
+	Plug 'AlessandroYorba/Despacio'																						" Despacio theme
 	Plug 'ryanoasis/vim-devicons'																							" Extra fancy icons
 	Plug 'Yggdroot/indentLine'																								" Adds ident level seperator
 	Plug 'lukas-reineke/indent-blankline.nvim'																" Convert indentline to vtext
@@ -14,6 +18,15 @@ call plug#begin()
 	Plug 'chrisbra/colorizer'																									" Show colour codes
 	Plug 'vim-airline/vim-airline-themes'																			" Themes for airline
 	Plug 'haya14busa/incsearch.vim'																						" Better highlight for search
+
+	" => Syntax
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}														" Where a lot of magic happens
+	Plug 'dense-analysis/ale'																									" Linting tech	
+	Plug 'sheerun/vim-polyglot'																								" Syntaxing for everything else
+	Plug 'habamax/vim-godot'																									" Add syntaxing for GDscript
+	Plug 'git@gitlab.bisimulations.com:neil.messelmani/bisim-sqf.git'					" BISIM sqf syntax
+	Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+	Plug 'Quramy/tsuquyomi'
 	
 	" => Tools
 	Plug 'airblade/vim-rooter'																								" Change CWD to the root of the VCS
@@ -48,12 +61,9 @@ call plug#begin()
 	Plug 'godlygeek/tabular'																									" Line up text ased on character
 	Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }	" Markdown preview
 	Plug 'j5shi/CommandlineComplete.vim'																			" Ctrl+n/p for completion in cmd
-
-	" => Syntax
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}														" Where a lot of magic happens
-	Plug 'sheerun/vim-polyglot'																								" Syntaxing for everything else
-	Plug 'habamax/vim-godot'																									" Add syntaxing for GDscript
-	Plug 'git@gitlab.bisimulations.com:neil.messelmani/bisim-sqf.git'					" BISIM sqf syntax
+	Plug 'szw/vim-maximizer'																									" Toggle maximize panel
+	Plug 'honza/vim-snippets'																									" Collection of snippets
+	Plug 'editorconfig/editorconfig-vim'																			" Compatibility with editorconf
 
 call plug#end()
 

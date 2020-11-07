@@ -1,18 +1,6 @@
 {
-    // Godot
-    "languageserver": {
-        "godot": {
-            "host": "127.0.0.1",
-            "filetypes": ["gdscript"],
-            "port": 6008
-        }
-    },
-
 		// yank
 		"yank.highlight.duration": 150,
-
-    // Python
-    "python.jediEnabled": false,
 
     // Git
     "git.addGBlameToVirtualText":true,
@@ -59,7 +47,6 @@
           ["expanded?", "collapse", "expand"],
           "open"
         ],
-        // "o": ["expanded?", "collapse", "expand"],
         "<cr>": ["expandable?", "cd", "open"],
         "H": "open:split",
         "S": "open:split:plain",
@@ -103,5 +90,20 @@
         "]c": "gitNext",
         "<<": "gitStage",
         ">>": "gitUnstage"
-    }
+    },
+		// ALE
+		"diagnostic.displayByAle": true,
+
+    // Godot
+    "languageserver": {
+        "godot": {
+            "host": "127.0.0.1",
+            "filetypes": ["gdscript"],
+            "port": 6008
+        }
+    },
+
+    // Python
+    "python.jediEnabled": false
 }
+

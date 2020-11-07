@@ -46,7 +46,7 @@ set mouse=a																												" Enables mouse
 set laststatus=2																									" Always show the status line
 
 " Undo files
-set undodir=$LOCALAPPDATA."\\nvim\\undotree"
+set undodir=$LOCALAPPDATA.'nvim\undotree'
 set undofile
 
 let g:python2_host_prog = 'C:\Program Files\Python27\python.exe'	" Python 2 Path

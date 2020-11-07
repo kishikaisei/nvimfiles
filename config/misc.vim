@@ -1,9 +1,21 @@
+" => Misc
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:tsuquyomi_disable_quickfix = 1
+let g:syntastic_typescript_checkers = ['tsuquyomi'] 
+
 " => CommandlineComplete
 cmap <c-p> <Plug>CmdlineCompleteBackward
 cmap <c-n> <Plug>CmdlineCompleteForward
 
 " => match it
 let g:loaded_matchit = 1
+
+" => ALE
+let g:ale_disable_lsp = 1
+let g:ale_sign_error = ''
+let g:ale_sign_warning = ''
+let g:airline#extensions#ale#enabled = 1
 
 " => windowswap
 let g:windowswap_map_keys = 0
@@ -68,6 +80,7 @@ let g:lazygit_floating_window_scaling_factor = 0.9 " scaling factor for floating
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#tab_min_count = 2
+let g:airline#extensions#tabline#buffer_min_count = 2
 let g:airline_left_sep  = ''
 let g:airline_left_alt_sep  = ''
 let g:airline_right_sep = ''
@@ -95,18 +108,16 @@ augroup godot | au!
   au FileType gdscript call GodotSettings()
 augroup end
 
-" Colorizer
+" => Colorizer
 let g:colorizer_use_virtual_text = 1
 
-" Sleuth
+" => Sleuth
 let g:sleuth_automatic = 1
 
-" Wildfire
+" => Wildfire
 " nmap = <Plug>(wildfire-fuel)
 " nmap - <Plug>(wildfire-water)
 
-" goneovim
-autocmd FileType markdown nnoremap <buffer> <C-p> :GonvimMarkdown<CR>
-" Neovide
+" => Neovide
 let g:neovide_cursor_animation_length=0.05
 
