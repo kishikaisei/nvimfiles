@@ -1,7 +1,7 @@
 call plug#begin()
 
 	" => Aesthetics
-	Plug 'rafi/awesome-vim-colorschemes'																			" Colorscheme pack
+	" Plug 'rafi/awesome-vim-colorschemes'																			" Colorscheme pack
 	Plug 'fenetikm/falcon'																										" Falcon theme
 	Plug 'overcache/NeoSolarized'																							" Solarized theme
 	Plug 'embark-theme/vim', { 'as': 'embark' }																" Embark theme
@@ -10,13 +10,16 @@ call plug#begin()
 	Plug 'AlessandroYorba/Arcadia'																						" Arcadia theme
 	Plug 'AlessandroYorba/Breve'																							" Breve theme
 	Plug 'AlessandroYorba/Despacio'																						" Despacio theme
+	Plug 'AlessandroYorba/Sierra', {'branch': 'nightly'}											" Sierra theme
+	Plug 'gruvbox-community/gruvbox'																					" Gruvbox theme
+	Plug 'cocopon/iceberg.vim'																								" Iceberg theme
+	Plug 'vim-airline/vim-airline-themes'																			" Themes for airline
 	Plug 'ryanoasis/vim-devicons'																							" Extra fancy icons
 	Plug 'Yggdroot/indentLine'																								" Adds ident level seperator
 	Plug 'lukas-reineke/indent-blankline.nvim'																" Convert indentline to vtext
 	Plug 'TaDaa/vimade'																												" Darkens off focus panel
 	Plug 'tpope/vim-sleuth'																										" Automatically set tabs params
 	Plug 'chrisbra/colorizer'																									" Show colour codes
-	Plug 'vim-airline/vim-airline-themes'																			" Themes for airline
 	Plug 'haya14busa/incsearch.vim'																						" Better highlight for search
 
 	" => Syntax
@@ -27,6 +30,7 @@ call plug#begin()
 	Plug 'git@gitlab.bisimulations.com:neil.messelmani/bisim-sqf.git'					" BISIM sqf syntax
 	Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 	Plug 'Quramy/tsuquyomi'
+	" Plug 'neovim/nvim-lspconfig'
 	
 	" => Tools
 	Plug 'airblade/vim-rooter'																								" Change CWD to the root of the VCS
@@ -63,7 +67,6 @@ call plug#begin()
 	Plug 'j5shi/CommandlineComplete.vim'																			" Ctrl+n/p for completion in cmd
 	Plug 'szw/vim-maximizer'																									" Toggle maximize panel
 	Plug 'honza/vim-snippets'																									" Collection of snippets
-	Plug 'editorconfig/editorconfig-vim'																			" Compatibility with editorconf
 
 call plug#end()
 
