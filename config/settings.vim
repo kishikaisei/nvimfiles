@@ -71,6 +71,8 @@ set noshowmode
 " Set default colorscheme
 " colorscheme gruvbox
 colorscheme sierra
+" let laserwavecolor="dark"
+" colorscheme laserwave
 set background=dark
 let g:gruvbox_contrast_dark					= 'soft'
 let g:gruvbox_contrast_light				= 'hard'

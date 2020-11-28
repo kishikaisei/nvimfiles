@@ -110,6 +110,12 @@ augroup end
 
 " => Colorizer
 let g:colorizer_use_virtual_text = 1
+let g:colorizer_auto_color = 1
+let g:colorizer_skip_comments = 1
+
+" => Hexokinase
+let g:Hexokinase_highlighters = ['foregroundfull']
+set signcolumn=yes:9
 
 " => Sleuth
 let g:sleuth_automatic = 1

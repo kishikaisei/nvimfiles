@@ -6,10 +6,10 @@ call plug#begin()
 	Plug 'overcache/NeoSolarized'																							" Solarized theme
 	Plug 'embark-theme/vim', { 'as': 'embark' }																" Embark theme
 	Plug 'NLKNguyen/papercolor-theme'																					" Papercolor theme
-	Plug 'AlessandroYorba/Alduin'																							" Alduin theme
-	Plug 'AlessandroYorba/Arcadia'																						" Arcadia theme
-	Plug 'AlessandroYorba/Breve'																							" Breve theme
-	Plug 'AlessandroYorba/Despacio'																						" Despacio theme
+	Plug 'AlessandroYorba/Alduin', {'branch': 'nightly'}											" Alduin theme
+	Plug 'AlessandroYorba/Arcadia', {'branch': 'nightly'}											" Arcadia theme
+	Plug 'AlessandroYorba/Breve', {'branch': 'nightly'}												" Breve theme
+	Plug 'AlessandroYorba/Despacio', {'branch': 'nightly'}										" Despacio theme
 	Plug 'AlessandroYorba/Sierra', {'branch': 'nightly'}											" Sierra theme
 	Plug 'gruvbox-community/gruvbox'																					" Gruvbox theme
 	Plug 'cocopon/iceberg.vim'																								" Iceberg theme
@@ -20,6 +20,7 @@ call plug#begin()
 	Plug 'TaDaa/vimade'																												" Darkens off focus panel
 	Plug 'tpope/vim-sleuth'																										" Automatically set tabs params
 	Plug 'chrisbra/colorizer'																									" Show colour codes
+	Plug 'RRethy/vim-hexokinase'
 	Plug 'haya14busa/incsearch.vim'																						" Better highlight for search
 
 	" => Syntax
@@ -28,8 +29,8 @@ call plug#begin()
 	Plug 'sheerun/vim-polyglot'																								" Syntaxing for everything else
 	Plug 'habamax/vim-godot'																									" Add syntaxing for GDscript
 	Plug 'git@gitlab.bisimulations.com:neil.messelmani/bisim-sqf.git'					" BISIM sqf syntax
-	Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-	Plug 'Quramy/tsuquyomi'
+	Plug 'Shougo/vimproc.vim', {'do' : 'make'}																" TODO check what this actually does
+	Plug 'Quramy/tsuquyomi'																										" Typescript stuff
 	" Plug 'neovim/nvim-lspconfig'
 	
 	" => Tools
@@ -50,7 +51,7 @@ call plug#begin()
 	Plug 'voldikss/vim-floaterm'																							" Floating unpanled terminal
 	" Plug 'brooth/far.vim'																											" Search and replace
 	Plug 'simnalamburt/vim-mundo'																							" Visualise the undotree
-	Plug 'majutsushi/tagbar'
+	Plug 'majutsushi/tagbar' 																									" Relevent for c++ stuff
 	" Plug 'jceb/vim-orgmode'																										" Easy todo list
 	Plug 'pseewald/vim-anyfold'																								" Folding helper
 	Plug 'dkarter/bullets.vim'
@@ -68,5 +69,6 @@ call plug#begin()
 	Plug 'szw/vim-maximizer'																									" Toggle maximize panel
 	Plug 'honza/vim-snippets'																									" Collection of snippets
 
+	Plug 'C:\laserwave\'
 call plug#end()
 
